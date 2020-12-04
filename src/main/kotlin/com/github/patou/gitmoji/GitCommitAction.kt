@@ -170,7 +170,7 @@ class GitCommitAction : AnAction() {
     private fun loadGitmojiFromHTTP() {
         val client = OkHttpClient()
         val request: Request = Builder()
-            .url("https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json")
+            .url("https://gitee.com/daihy/gitmoji/raw/master/src/data/gitmojis.json")
             .build()
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
